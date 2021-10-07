@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Handler</title>
+    <link rel="stylesheet" href="Files/Bootstrap-4 Files/bootstrap.min.css">
+    <link rel="stylesheet" href="Files/taskHandler.css">
+    <link rel="shortcut icon" href="Images/Logo/1.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="row m-0">
+        <!-- Start Add New Task/Left Side -->
+        <div class="col-3 left-side">
+            <h2>Add New Task</h2>
+            <input type="text" id="task-name" class="task-name form-control" placeholder="Enter Task Name">
+            <input type="number" min="0" id="task-duration" class="task-duration form-control"
+                placeholder="Enter Task Duration in Minutes">
+            <button class="btn add">ADD</button>
+        </div>
+        <!-- End Add New Task/Left Side -->
+
+        <!-- Start Task Handler -->
+        <div class="col-6 tasks">
+            <span class="task-header">Task Name</span>
+            <div class="timer">
+                <div class="progressBar"><span></span></div>
+                <button class="btn btn-warning pause">Pause</button>
+            </div>
+        </div>
+        <!-- End Task Handler -->
+
+        <!-- Start Tasks/Right Side -->
+        <div class="col-3 right-side">
+            <h2>Tasks</h2>
+            <div class="tasks-output"></div>
+        </div>
+        <!-- End Tasks/Right Side -->
+
+        <footer>
+            <p>CopyRights &copy;<span id="year">Year</span> / MR-COMPLETE</p>
+        </footer>
+    </div>
+
+    <script src="Files/Bootstrap-4 Files/jquery.min.js"></script>
+    <script src="Files/Bootstrap-4 Files/bootstrap.min.js"></script>
+    <script src="Files/taskHandler.js"></script>
+</body>
+
+</html>

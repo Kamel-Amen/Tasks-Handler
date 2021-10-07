@@ -1,0 +1,128 @@
+/* Start Colors */
+/* End Colors */
+/* Start Body */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0; }
+
+body {
+  background: #051321;
+  font-family: "Josefin Sans";
+  color: #fff; }
+
+.left-side,
+.right-side {
+  height: 10vh;
+  background-color: #eb524a;
+  text-align: center;
+  border: 3px solid #fff;
+  border-top: none;
+  transition: height 0.5s ease-in-out;
+  overflow: hidden;
+  border-radius: 0 0 25px 25px; }
+  .left-side:hover,
+  .right-side:hover {
+    height: 100vh; }
+  .left-side > h2,
+  .right-side > h2 {
+    text-shadow: 2px 2px 0px #051321;
+    text-decoration: underline;
+    margin-top: 10px; }
+
+/* End Body */
+/* Start Left Side/Add New Task */
+.left-side > h2 {
+  margin-bottom: 100px; }
+.left-side > input {
+  margin-bottom: 40px; }
+.left-side > button {
+  width: 100px;
+  height: 100px;
+  background-color: #051321;
+  border-radius: 50%;
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out 0.25s;
+  color: #fff;
+  font-size: 1.5em;
+  border: 3px solid #fff;
+  margin-top: 50px; }
+  .left-side > button:hover {
+    width: 100%;
+    transform: rotate(360deg);
+    background: #fff;
+    color: #eb524a;
+    font-size: 2em; }
+
+/* End Left Side/Add New Task */
+/* Start Tasks */
+.tasks {
+  text-align: center;
+  padding-top: 10px; }
+  .tasks > .task-header {
+    font-size: 2em; }
+  .tasks > .timer {
+    margin: 25px 0 0; }
+    .tasks > .timer > .progressBar {
+      position: relative;
+      width: 35%;
+      height: 400px;
+      margin: 0 auto 25px;
+      border-radius: 25px;
+      overflow: hidden;
+      border: 3px solid #ffbe44;
+      background: #051321; }
+      .tasks > .timer > .progressBar > span {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        background-image: linear-gradient(to top, #f7a100, #ffb52b, #ffbe44);
+        z-index: 2;
+        transition: all 0.5s ease-in-out; }
+    .tasks > .timer > button {
+      background: #ffbe44; }
+  .tasks > audio {
+    margin-top: 10px;
+    opacity: 0;
+    cursor: default; }
+
+/* End Tasks */
+/* Start Right Side/Tasks */
+.right-side {
+  border-radius: 0 0 0 25px; }
+  .right-side:hover {
+    overflow-x: hidden;
+    overflow-y: scroll; }
+  .right-side > .tasks-output {
+    margin-top: 25px; }
+    .right-side > .tasks-output > .task {
+      background-color: #fff;
+      color: #eb524a; }
+      .right-side > .tasks-output > .task > button {
+        border-radius: 0; }
+
+/* End Right Side/Tasks */
+/* Start Footer */
+footer {
+  position: absolute;
+  z-index: -1;
+  background-color: #111;
+  color: #969da1;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  bottom: 0; }
+  footer > p {
+    padding-top: 13px;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 3px #000; }
+
+/* End Footer */
+/* Default Classes */
+.active {
+  color: #080; }
+
+/*# sourceMappingURL=taskHandler.css.map */

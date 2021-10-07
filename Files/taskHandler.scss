@@ -1,0 +1,159 @@
+/* Start Colors */
+$main-color: #051321;
+$second-color: #eb524a;
+$third-color: #ffbe44;
+$fourth-color: #fff;
+/* End Colors */
+
+/* Start Body */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+body {
+  background: $main-color;
+  font-family: "Josefin Sans";
+  color: $fourth-color;
+}
+
+.left-side,
+.right-side {
+  height: 10vh;
+  background-color: $second-color;
+  text-align: center;
+  border: 3px solid $fourth-color;
+  border-top: none;
+  transition: height 0.5s ease-in-out;
+  overflow: hidden;
+  border-radius: 0 0 25px 25px;
+  &:hover {
+    height: 100vh;
+  }
+  & > h2 {
+    text-shadow: 2px 2px 0px $main-color;
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+}
+/* End Body */
+
+/* Start Left Side/Add New Task */
+.left-side {
+  & > h2 {
+    margin-bottom: 100px;
+  }
+  & > input {
+    margin-bottom: 40px;
+  }
+  & > button {
+    width: 100px;
+    height: 100px;
+    background-color: $main-color;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out 0.25s;
+    color: $fourth-color;
+    font-size: 1.5em;
+    border: 3px solid $fourth-color;
+    margin-top: 50px;
+    &:hover {
+      width: 100%;
+      transform: rotate(360deg);
+      background: $fourth-color;
+      color: $second-color;
+      font-size: 2em;
+    }
+  }
+}
+/* End Left Side/Add New Task */
+
+/* Start Tasks */
+.tasks {
+  text-align: center;
+  padding-top: 10px;
+  & > .task-header {
+    font-size: 2em;
+  }
+  & > .timer {
+    margin: 25px 0 0;
+    & > .progressBar {
+      position: relative;
+      width: 35%;
+      height: 400px;
+      margin: 0 auto 25px;
+      border-radius: 25px;
+      overflow: hidden;
+      border: 3px solid $third-color;
+      background: $main-color;
+      & > span {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        background-image: linear-gradient(
+          to top,
+          darken($third-color, 15%),
+          darken($third-color, 5%),
+          $third-color
+        );
+        z-index: 2;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    & > button {
+      background: $third-color;
+    }
+  }
+  & > audio {
+    margin-top: 10px;
+    opacity: 0;
+    cursor: default;
+  }
+}
+/* End Tasks */
+
+/* Start Right Side/Tasks */
+.right-side {
+  border-radius: 0 0 0 25px;
+  &:hover {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  & > .tasks-output {
+    margin-top: 25px;
+    & > .task {
+      background-color: $fourth-color;
+      color: $second-color;
+      & > button {
+        border-radius: 0;
+      }
+    }
+  }
+}
+/* End Right Side/Tasks */
+
+/* Start Footer */
+footer {
+  position: absolute;
+  z-index: -1;
+  background-color: #111;
+  color: #969da1;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  bottom: 0;
+  & > p {
+    padding-top: 13px;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 3px #000;
+  }
+}
+/* End Footer */
+
+/* Default Classes */
+.active {
+  color: #080;
+}
